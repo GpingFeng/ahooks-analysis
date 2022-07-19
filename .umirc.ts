@@ -1,6 +1,6 @@
 import { defineConfig } from 'dumi';
 
-const repo = 'dumi-template';
+const repo = 'ahooks-analysis';
 
 export default defineConfig({
   title: repo,
