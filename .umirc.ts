@@ -3,7 +3,7 @@ import { defineConfig } from 'dumi';
 const repo = 'ahooks-analysis';
 
 export default defineConfig({
-  title: repo,
+  title: 'ahooks analysis',
   favicon:
     'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
   logo:
@@ -14,12 +14,21 @@ export default defineConfig({
   // Because of using GitHub Pages
   base: `/${repo}/`,
   publicPath: `/${repo}/`,
+  mfsu: {},
   navs: [
-    null,
+    {
+      title: 'Hooks',
+      path: '/zh-CN/components',
+    },
     {
       title: 'GitHub',
-      path: 'https://github.com/umijs/dumi-template',
+      path: 'https://github.com/GpingFeng/ahooks-analysise',
+    },
+    {
+      title: 'ahooks 官网',
+      path: 'https://ahooks.gitee.io/zh-CN',
     },
   ],
+  // locales: [['zh-CN', '中文']]
   // more config: https://d.umijs.org/config
 });

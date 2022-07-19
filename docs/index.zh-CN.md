@@ -1,8 +1,8 @@
 ---
-title: ahooks-analysis - ahooks 源码分析
+title: ahooks analysis - ahooks 源码分析
 order: 10
 hero:
-  title: ahooks-analysis
+  title: ahooks analysis
   desc: 📖 ahooks 源码分析，帮助你更深入 React Hooks
   actions:
     - text: 快速开始
