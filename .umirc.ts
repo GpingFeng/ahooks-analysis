@@ -17,7 +17,7 @@ export default defineConfig({
   mfsu: {},
   navs: [
     {
-      title: 'Guide',
+      title: '指南',
       path: '/guide',
     },
     {
