@@ -72,7 +72,7 @@ export default defineConfig({
     '/zh-CN/hooks/request': [
       {
         title: 'useRequest',
-        children: ['/hooks/request/index'],
+        // children: ['/hooks/request/index'],
       },
     ],
   },
