@@ -6,7 +6,7 @@ hero:
   desc: 📖 ahooks 源码分析，帮助你更深入 React Hooks
   actions:
     - text: 快速开始
-      link: /zh-CN/components/foo
+      link: /zh-CN/hooks/request/request
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: 自定义 Hooks 最佳实践

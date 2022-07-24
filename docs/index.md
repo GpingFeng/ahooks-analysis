@@ -6,7 +6,7 @@ hero:
   desc: 📖 A doc tool can assist you to develop libraries & write docs.
   actions:
     - text: Getting Started
-      link: /components/foo
+      link: /hooks/request/request
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: Out of the box
