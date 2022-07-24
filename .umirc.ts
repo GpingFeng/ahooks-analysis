@@ -18,11 +18,11 @@ export default defineConfig({
   navs: [
     {
       title: 'Guide',
-      path: '/zh-CN/guide',
+      path: '/guide',
     },
     {
       title: 'Hooks',
-      path: '/zh-CN/hooks',
+      path: '/hooks',
     },
     {
       title: 'GitHub',
@@ -33,49 +33,6 @@ export default defineConfig({
       path: 'https://ahooks.gitee.io/zh-CN',
     },
   ],
-  menus: {
-    '/zh-CN/guide': [
-      {
-        title: '介绍',
-        path: '/guide',
-      },
-      // {
-      //   title: 'v2 to v3',
-      //   path: '/guide/upgrade',
-      // },
-      // {
-      //   title: 'DOM 类 Hooks 使用规范',
-      //   path: '/guide/dom',
-      // },
-      // {
-      //   title: 'blog',
-      //   children: [
-      //     {
-      //       title: 'ahooks 输入输出函数处理规范',
-      //       path: '/zh-CN/guide/blog/function',
-      //     },
-      //     {
-      //       title: 'React Hooks & SSR',
-      //       path: '/zh-CN/guide/blog/ssr',
-      //     },
-      //     {
-      //       title: 'React Hooks & react-refresh（HMR）',
-      //       path: '/zh-CN/guide/blog/hmr',
-      //     },
-      //     {
-      //       title: 'React Hooks & strict mode',
-      //       path: '/zh-CN/guide/blog/strict',
-      //     },
-      //   ],
-      // },
-    ],
-    '/zh-CN/hooks/request': [
-      {
-        title: 'useRequest',
-        // children: ['/hooks/request/index'],
-      },
-    ],
-  },
-  // locales: [['zh-CN', '中文']],
+  locales: [['zh-CN', '中文']],
   // more config: https://d.umijs.org/config
 });
