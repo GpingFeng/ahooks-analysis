@@ -22,10 +22,6 @@ features:
 footer: Open-source MIT Licensed | Copyright © 2022-present<br />Powered by self
 ---
 
-## 反馈与共建
-
-TODO:
-
 <!-- 请访问 [GitHub](https://github.com/umijs/dumi) 或加入讨论群： -->
 
 <!-- <div>
