@@ -9,6 +9,7 @@
   - [x] 维护计划
   - [ ] ahooks 整体架构
   - [ ] 贡献指南
+  - [ ] 如何参与 ahooks 维护
   - [ ] Blog 列表
 - Hooks 列表
   - useRequest
