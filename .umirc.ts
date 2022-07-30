@@ -34,5 +34,66 @@ export default defineConfig({
     },
   ],
   locales: [['zh-CN', '中文']],
+  menus: {
+    '/hooks': [
+      {
+        title: 'useRequest',
+        children: ['hooks/request/request'],
+      },
+      {
+        title: 'Scene',
+        children: ['hooks/scene/useAntdTable', 'hooks/scene/usePagination'],
+      },
+      {
+        title: 'LifeCycle',
+        children: ['hooks/lifeCycle/index'],
+      },
+      {
+        title: 'State',
+        children: [
+          'hooks/state/useSetState',
+          'hooks/state/toggle',
+          'hooks/state/useUrlState',
+          'hooks/state/useCookieState',
+          'hooks/state/storage',
+          'hooks/state/useMap',
+          'hooks/state/useSet',
+          'hooks/state/usePrevious',
+          'hooks/state/useRafState',
+          'hooks/state/useSafeState',
+          'hooks/state/useGetState',
+        ],
+      },
+      {
+        title: 'Effect',
+        children: [
+          'hooks/effect/handleTime',
+          'hooks/effect/useAsyncEffect',
+          'hooks/effect/timer',
+          'hooks/effect/rafTimer',
+          'hooks/effect/useLockFn',
+        ],
+      },
+      {
+        title: 'Dom',
+        children: [
+          'hooks/dom/useEventListener',
+          'hooks/dom/useClickAway',
+          'hooks/dom/useDocumentVisibility',
+          'hooks/dom/useEventTarget',
+          'hooks/dom/useTitle',
+          'hooks/dom/useFavicon',
+          'hooks/dom/useFullscreen',
+          'hooks/dom/useHover',
+        ],
+      },
+      {
+        title: 'Advanced',
+      },
+      {
+        title: 'Dev',
+      },
+    ],
+  },
   // more config: https://d.umijs.org/config
 });
