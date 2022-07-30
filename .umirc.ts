@@ -38,7 +38,16 @@ export default defineConfig({
     '/hooks': [
       {
         title: 'useRequest',
-        children: ['hooks/request/request'],
+        children: [
+          'hooks/request/useRequest',
+          'hooks/request/useLoadingDelayPlugin',
+          'hooks/request/usePollingPlugin',
+          'hooks/request/useAutoRunPlugin',
+          'hooks/request/useRefreshOnWindowFocusPlugin',
+          'hooks/request/useThrottlePlugin',
+          'hooks/request/useCachePlugin',
+          'hooks/request/useRetryPlugin',
+        ],
       },
       {
         title: 'Scene',
