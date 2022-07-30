@@ -2,6 +2,8 @@
 
 本系列主要是针对 ahooks 的 `v3.3.13` 版本进行源码解读。个人 folk 仓库可见 [详情](https://github.com/GpingFeng/hooks)。
 
+不排除中间会对 ahooks 其他版本的 hook 进行解读。**主要体现出其设计和实现思路。**
+
 ## React hooks utils 库
 
 自从 React 16.8 版本推出 React hooks，越来越多的项目使用 Function Component。React hooks utils 库随即诞生，它主要解决的两个问题如下：
