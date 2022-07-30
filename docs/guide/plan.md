@@ -4,6 +4,12 @@
 
 > 会不定期更新计划列表。
 
+2022.07.30 更新：
+
+**已完成：45。**
+
+**未完成：43。**
+
 - [x] 文档搭建
 - 指南
   - [x] 维护计划
@@ -14,7 +20,14 @@
 - Hooks 列表
   - useRequest
     - [x] 插件化机制详解
-    - [ ] 各个插件详解
+    - [ ] 基础用法
+    - [ ] 轮询
+    - [ ] 依赖刷新
+    - [ ] 屏幕聚焦重新请求
+    - [ ] 防抖
+    - [ ] 节流
+    - [ ] 缓存 & SWR
+    - [ ] 错误重试
   - Scene
     - [x] useAntdTable
     - [ ] useFusionTable
@@ -92,3 +105,6 @@
     - [x] useLatest
     - [x] useMemoizedFn
     - [ ] useReactive
+  - Dev
+    - [ ] useTrackedEffect
+    - [ ] useWhyDidYouUpdate
