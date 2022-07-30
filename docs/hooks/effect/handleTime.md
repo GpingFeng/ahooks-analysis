@@ -202,10 +202,3 @@ export default useUpdate;
 在我们写代码的时候需要清晰的知道，组件的生命周期是怎样的，我们代码的执行顺序、执行的时机是怎样的。
 
 在 Function Component 中，使用 useEffect/useLayoutEffect 完成了 Class Components 生命周期的职责。ahooks 也是基于这两个封装了常见的代码执行时机，使用这些 hook，可以让我们的代码更加具有可读性以及逻辑更加清晰。
-
-系列文章：
-
-- [大家都能看得懂的源码（一）ahooks 整体架构篇](https://juejin.cn/post/7105396478268407815)
-- [如何使用插件化机制优雅的封装你的请求 hook ](https://juejin.cn/post/7105733829972721677)
-- [ahooks 是怎么解决 React 的闭包问题的？](https://juejin.cn/post/7106061970184339464)
-- [ahooks 是怎么解决用户多次提交问题？](https://juejin.cn/post/7106461530232717326)

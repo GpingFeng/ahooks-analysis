@@ -171,14 +171,6 @@ useAsyncEffect(
 
 我们可以将 async...await 的逻辑封装在 useEffect 回调函数的内部，这就是 ahooks useAsyncEffect 的实现思路，而且它的范围更加广，它支持的是所有的异步函数，包括 `generator function`。
 
-系列文章：
-
-- [大家都能看得懂的源码（一）ahooks 整体架构篇](https://juejin.cn/post/7105396478268407815 '大家都能看得懂的源码（一）ahooks 整体架构篇')
-- [如何使用插件化机制优雅的封装你的请求 hook ](https://juejin.cn/post/7105733829972721677 '如何使用插件化机制优雅的封装你的请求hook ')
-- [ahooks 是怎么解决 React 的闭包问题的？](https://juejin.cn/post/7106061970184339464 'ahooks 是怎么解决 React 的闭包问题的？')
-- [ahooks 是怎么解决用户多次提交问题？](https://juejin.cn/post/7106461530232717326 'ahooks 是怎么解决用户多次提交问题？')
-- [ahooks 中那些控制“时机”的 hook 都是怎么实现的？](https://juejin.cn/post/7107189225509879838 'ahooks 中那些控制“时机”的hook都是怎么实现的？')
-
 ## 参考
 
 - [React useEffect 不支持 async function 你知道吗？](https://zhuanlan.zhihu.com/p/425129987 'React useEffect 不支持 async function 你知道吗？')
