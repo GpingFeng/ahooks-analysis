@@ -8,7 +8,7 @@ hero:
     - text: 指南
       link: /guide
     - text: hooks
-      link: /hooks/request/request
+      link: /hooks/request/use-request
 features:
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
     title: 自定义 Hooks 最佳实践

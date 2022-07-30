@@ -1,10 +1,10 @@
 # 核心原理-plugin 机制
 
-本文来讲下 ahooks 的核心 hook —— useRequest。
+本文来讲下 ahooks 的核心 hook —— useRequest。在介绍它的详细功能之前，我们得先介绍它的核心原理，plugin 机制。
 
 ## useRequest 简介
 
-根据官方文档的介绍，useRequest 是一个强大的异步数据管理的 Hooks，React 项目中的网络请求场景使用 useRequest 就够了。
+> useRequest 是一个强大的异步数据管理的 Hooks，React 项目中的网络请求场景使用 useRequest 就够了。
 
 useRequest **通过插件式组织代码**，核心代码极其简单，并且可以很方便的扩展出更高级的功能。目前已有能力包括：
 
@@ -58,7 +58,7 @@ function useRequest<TData, TParams extends any[]>(
 export default useRequest;
 ```
 
-这里第一（service 请求实例）第二个参数（配置选项），我们比较熟悉，第三个参数文档中没有提及，其实就是插件列表，用户可以自定义插件拓展功能。
+这里第一个参数（service 请求实例）第二个参数（配置选项），我们比较熟悉，第三个参数文档中没有提及，其实就是插件列表，用户可以自定义插件拓展功能，目前官方文档没有写明，估计是不希望我们这么用。
 
 可以看到返回了 `useRequestImplement` 方法。主要是对 Fetch 类进行实例化。
 
@@ -73,7 +73,7 @@ const fetchInstance = useCreation(() => {
   return new Fetch<TData, TParams>(
     serviceRef,
     fetchOptions,
-    // 可以 useRequestImplement 组件
+    // 更新组件
     update,
     Object.assign({}, ...initState),
   );
@@ -84,7 +84,7 @@ fetchInstance.options = fetchOptions;
 fetchInstance.pluginImpls = plugins.map((p) => p(fetchInstance, fetchOptions));
 ```
 
-实例化的时候，传参依次为请求实例，options 选项，父组件的更新函数，初始状态值。
+实例化的时候，传参依次为请求实例，options 选项，组件的更新方法，初始状态值。
 
 这里需要非常留意的一点是最后一行，它执行了所有的 plugins 插件，传入的是 fetchInstance 实例以及 options 选项，返回的结果赋值给 fetchInstance 实例的 `pluginImpls`。
 
@@ -409,6 +409,8 @@ try {
 useRequest 是 ahooks 最核心的功能之一，它的功能非常丰富，但核心代码（Fetch 类）相对简单，这得益于它的插件化机制，把特定功能交给特定的插件去实现，自己只负责主流程的设计，并暴露相应的执行时机即可。
 
 这对于我们平时的组件/hook 封装很有帮助，**我们对一个复杂功能的抽象，可以尽可能保证对外接口简单。内部实现需要遵循单一职责的原则，通过类似插件化的机制，细化拆分组件，从而提升组件可维护性、可测试性。**
+
+其中也提到了几个插件，我们后面针对几个重要的插件做下解析。
 
 ## 参考
 
