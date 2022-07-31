@@ -119,7 +119,7 @@ export default useUnmountedRef;
 
 ## Effect
 
-> 这里只会讲官方文档 `Effect` 下面的几个，有部分是定时器、防抖节流等，咱们后面的系列具体分析。
+> 这里只会讲官方文档 `Effect` 下面的部分几个，有部分是定时器、防抖节流等，咱们后面的系列具体分析。
 
 ### useUpdateEffect 和 useUpdateLayoutEffect
 
