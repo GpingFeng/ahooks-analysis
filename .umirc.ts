@@ -55,7 +55,11 @@ export default defineConfig({
       },
       {
         title: 'LifeCycle',
-        children: ['hooks/lifeCycle/index'],
+        children: [
+          'hooks/lifeCycle/useMount',
+          'hooks/lifeCycle/useUnmount',
+          'hooks/lifeCycle/useUnmountedRef',
+        ],
       },
       {
         title: 'State',
@@ -76,11 +80,13 @@ export default defineConfig({
       {
         title: 'Effect',
         children: [
-          'hooks/effect/handleTime',
+          'hooks/effect/useUpdateEffect',
           'hooks/effect/useAsyncEffect',
+          'hooks/effect/useDeepCompareEffect',
           'hooks/effect/timer',
           'hooks/effect/rafTimer',
           'hooks/effect/useLockFn',
+          'hooks/effect/useUpdate',
         ],
       },
       {
