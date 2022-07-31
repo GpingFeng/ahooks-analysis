@@ -51,7 +51,11 @@ export default defineConfig({
       },
       {
         title: 'Scene',
-        children: ['hooks/scene/useAntdTable', 'hooks/scene/usePagination'],
+        children: [
+          'hooks/scene/useAntdTable',
+          'hooks/scene/usePagination',
+          'hooks/scene/useDynamicList',
+        ],
       },
       {
         title: 'LifeCycle',
