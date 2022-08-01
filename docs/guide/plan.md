@@ -4,13 +4,13 @@
 
 > 会不定期更新计划列表。
 
-2022.07.30 更新：
+2022.08.01 更新：
 
 **总数：87。**
 
-**已完成：53。**
+**已完成：58。**
 
-**未完成：34。**
+**未完成：29。**
 
 - [x] 文档搭建
 - 指南
@@ -31,14 +31,14 @@
     - [x] 错误重试
   - Scene
     - [x] useAntdTable
-    - [ ] useFusionTable
+    - [x] useFusionTable
     - [ ] useInfiniteScroll
     - [x] usePagination
-    - [ ] useDynamicList
+    - [x] useDynamicList
     - [ ] useVirtualList
-    - [ ] useHistoryTravel
-    - [ ] useNetwork
-    - [ ] useSelections
+    - [x] useHistoryTravel
+    - [x] useNetwork
+    - [x] useSelections
     - [ ] useCountDown
     - [ ] useCounter
     - [ ] useTextSelection
