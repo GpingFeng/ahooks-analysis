@@ -55,6 +55,7 @@ export default defineConfig({
           'hooks/scene/useAntdTable',
           'hooks/scene/usePagination',
           'hooks/scene/useDynamicList',
+          'hooks/scene/useHistoryTravel',
         ],
       },
       {
