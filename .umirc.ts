@@ -53,9 +53,12 @@ export default defineConfig({
         title: 'Scene',
         children: [
           'hooks/scene/useAntdTable',
+          'hooks/scene/useFusionTable',
           'hooks/scene/usePagination',
           'hooks/scene/useDynamicList',
           'hooks/scene/useHistoryTravel',
+          'hooks/scene/useNetwork',
+          'hooks/scene/useSelections',
         ],
       },
       {
