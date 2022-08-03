@@ -8,9 +8,9 @@
 
 **总数：87。**
 
-**已完成：58。**
+**已完成：61。**
 
-**未完成：29。**
+**未完成：26。**
 
 - [x] 文档搭建
 - 指南
@@ -39,9 +39,9 @@
     - [x] useHistoryTravel
     - [x] useNetwork
     - [x] useSelections
-    - [ ] useCountDown
-    - [ ] useCounter
-    - [ ] useTextSelection
+    - [x] useCountDown
+    - [x] useCounter
+    - [x] useTextSelection
     - [ ] useWebSocket
   - LifeCycle
     - [x] useMount
