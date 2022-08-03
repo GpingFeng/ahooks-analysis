@@ -8,9 +8,9 @@
 
 **总数：87。**
 
-**已完成：61。**
+**已完成：62。**
 
-**未完成：26。**
+**未完成：25。**
 
 - [x] 文档搭建
 - 指南
@@ -90,7 +90,7 @@
     - [x] useFavicon
     - [x] useFullscreen
     - [x] useHover
-    - [ ] useInViewport
+    - [x] useInViewport
     - [ ] useKeyPress
     - [ ] useLongPress
     - [ ] useMouse
