@@ -92,7 +92,7 @@ export default defineConfig({
           'hooks/effect/useAsyncEffect',
           'hooks/effect/useDeepCompareEffect',
           'hooks/effect/timer',
-          'hooks/effect/RafTimer',
+          'hooks/effect/rafTimer',
           'hooks/effect/useLockFn',
           'hooks/effect/useUpdate',
         ],
