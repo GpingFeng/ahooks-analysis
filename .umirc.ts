@@ -59,6 +59,10 @@ export default defineConfig({
           'hooks/scene/useHistoryTravel',
           'hooks/scene/useNetwork',
           'hooks/scene/useSelections',
+          'hooks/scene/useCountdown',
+          'hooks/scene/useCounter',
+          'hooks/scene/useTextSelection',
+          'hooks/scene/useWebSocket',
         ],
       },
       {
