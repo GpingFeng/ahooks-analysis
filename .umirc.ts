@@ -151,6 +151,10 @@ export default defineConfig({
           'hooks/dev/useWhyDidYouUpdate',
         ],
       },
+      {
+        title: 'Utils',
+        children: ['hooks/utils/debounceAndThrottle'],
+      },
     ],
   },
   // more config: https://d.umijs.org/config
