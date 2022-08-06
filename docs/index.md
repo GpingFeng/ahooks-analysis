@@ -22,9 +22,10 @@ features:
 footer: Open-source MIT Licensed | Copyright © 2022-present<br />Powered by self
 ---
 
-<!-- 请访问 [GitHub](https://github.com/umijs/dumi) 或加入讨论群： -->
+## 👥 交流讨论
 
-<!-- <div>
-  <img data-type="dingtalk" src="https://gw.alipayobjects.com/zos/bmw-prod/ec249703-be12-416c-8f33-297e47d9439c/kjy5ls84_w1004_h1346.png" width="300" />
-  <img data-type="wechat" src="https://gw.alipayobjects.com/zos/bmw-prod/c18bc2a5-719a-48ca-b225-c79ef88bfb43/k7m10ymd_w1004_h1346.jpeg" width="300" />
-</div> -->
+欢迎大家加群讨论（有可能过期）。也欢迎大家关注我的公众号《前端杂货铺》，联系我（备注 ahooks）拉你入群。
+
+<img src="https://user-images.githubusercontent.com/20135760/183245957-f3b3781e-894e-48a4-bc3e-b61945eaf720.png" width="300" />
+
+<img src="https://user-images.githubusercontent.com/20135760/183246032-4b1c5fc6-a8b9-4567-bad4-cf47dceb5dd9.jpg" width="300" />
