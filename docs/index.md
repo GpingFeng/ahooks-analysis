@@ -15,7 +15,7 @@ features:
     desc: 每一个 ahooks 的 Hook 都对应特定的场景，方便构建属于你自己的 React hooks 工具库
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/d1ee0c6f-5aed-4a45-a507-339a4bfe076c/k7bjsocq_w144_h144.png
     title: 源码阅读的开始
-    desc: ahooks 代码库复杂度不高，我们也尽可能给大家讲得更详细，希望能带你进入阅读源码
+    desc: ahooks 代码库复杂度不高，我们也尽可能给大家讲得更详细，希望能带你进入阅读源码的世界
   - icon: https://gw.alipayobjects.com/zos/bmw-prod/b8570f4d-c1b1-45eb-a1da-abff53159967/kj9t990h_w144_h144.png
     title: 来给 ahooks 提 PR 吧
     desc: 分享参与 ahooks 开源项目经验，带大家熟悉源码的情况下，让大家都能参与到 ahooks 开源中
