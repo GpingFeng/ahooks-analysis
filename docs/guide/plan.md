@@ -8,9 +8,9 @@
 
 **总数：87。**
 
-**已完成：73。**
+**已完成：79。**
 
-**未完成：14。**
+**未完成：8。**
 
 - [x] 文档搭建
 - 指南
@@ -55,8 +55,8 @@
     - [x] useCookieState
     - [x] useLocalStorageState
     - [x] useSessionStorageState
-    - [ ] useDebounce
-    - [ ] useThrottle
+    - [x] useDebounce
+    - [x] useThrottle
     - [x] useMap
     - [x] useSet
     - [x] usePrevious
@@ -67,10 +67,10 @@
     - [x] useUpdateEffect
     - [x] useUpdateLayoutEffect
     - [x] useAsyncEffect
-    - [ ] useDebounceEffect
-    - [ ] useDebounceFn
-    - [ ] useThrottleFn
-    - [ ] useThrottleEffect
+    - [x] useDebounceEffect
+    - [x] useDebounceFn
+    - [x] useThrottleFn
+    - [x] useThrottleEffect
     - [x] useDeepCompareEffect
     - [x] useDeepCompareLayoutEffect
     - [x] useInterval
