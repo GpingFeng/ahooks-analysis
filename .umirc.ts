@@ -4,8 +4,8 @@ const repo = 'ahooks-analysis';
 
 export default defineConfig({
   title: 'ahooks analysis',
-  favicon: '/images/logo.png',
-  logo: '/images/logo.png',
+  favicon: `/${repo}/images/logo.png`,
+  logo: `/${repo}/images/logo.png`,
   outputPath: 'docs-dist',
   mode: 'site',
   hash: true,
