@@ -124,9 +124,22 @@ export default defineConfig({
       },
       {
         title: 'Advanced',
+        children: [
+          'hooks/advanced/useControllableValue',
+          'hooks/advanced/useCreation',
+          'hooks/advanced/useEventEmitter',
+          'hooks/advanced/useIsomorphicLayoutEffect',
+          'hooks/advanced/useLatest',
+          'hooks/advanced/useMemoizedFn',
+          'hooks/advanced/useReactive',
+        ],
       },
       {
         title: 'Dev',
+        children: [
+          'hooks/dev/useTrackedEffect',
+          'hooks/dev/useWhyDidYouUpdate',
+        ],
       },
     ],
   },
