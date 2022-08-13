@@ -8,9 +8,9 @@
 
 **总数：87。**
 
-**已完成：84。**
+**已完成：87。**
 
-**未完成：3。**
+**未完成：0。**
 
 - [x] 文档搭建
 - 指南
@@ -35,7 +35,7 @@
     - [x] useInfiniteScroll
     - [x] usePagination
     - [x] useDynamicList
-    - [ ] useVirtualList
+    - [x] useVirtualList
     - [x] useHistoryTravel
     - [x] useNetwork
     - [x] useSelections
@@ -83,9 +83,9 @@
     - [x] useEventListener
     - [x] useClickAway
     - [x] useDocumentVisibility
-    - [ ] useDrop & useDrag
+    - [x] useDrop & useDrag
     - [x] useEventTarget
-    - [ ] useExternal
+    - [x] useExternal
     - [x] useTitle
     - [x] useFavicon
     - [x] useFullscreen
