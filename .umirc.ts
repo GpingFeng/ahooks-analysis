@@ -151,7 +151,7 @@ export default defineConfig({
       },
       {
         title: 'Utils',
-        children: ['hooks/utils/debounceAndThrottle'],
+        children: ['hooks/utils/debounceAndThrottle', 'hooks/utils/rect'],
       },
     ],
   },
