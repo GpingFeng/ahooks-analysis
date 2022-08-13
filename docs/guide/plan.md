@@ -4,13 +4,13 @@
 
 > 会不定期更新计划列表。
 
-2022.08.06 更新：
+2022.08.13 更新：
 
 **总数：87。**
 
-**已完成：79。**
+**已完成：84。**
 
-**未完成：8。**
+**未完成：3。**
 
 - [x] 文档搭建
 - 指南
@@ -32,7 +32,7 @@
   - Scene
     - [x] useAntdTable
     - [x] useFusionTable
-    - [ ] useInfiniteScroll
+    - [x] useInfiniteScroll
     - [x] usePagination
     - [x] useDynamicList
     - [ ] useVirtualList
@@ -42,7 +42,7 @@
     - [x] useCountDown
     - [x] useCounter
     - [x] useTextSelection
-    - [ ] useWebSocket
+    - [x] useWebSocket
   - LifeCycle
     - [x] useMount
     - [x] useUnmount
@@ -91,15 +91,15 @@
     - [x] useFullscreen
     - [x] useHover
     - [x] useInViewport
-    - [ ] useKeyPress
-    - [ ] useLongPress
+    - [x] useKeyPress
+    - [x] useLongPress
     - [x] useMouse
     - [x] useResponsive
     - [x] useScroll
     - [x] useSize
     - [x] useFocusWithin
   - Advanced
-    - [ ] useControllableValue
+    - [x] useControllableValue
     - [x] useCreation
     - [x] useEventEmitter
     - [x] useIsomorphicLayoutEffect
