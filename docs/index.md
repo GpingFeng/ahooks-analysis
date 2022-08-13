@@ -24,6 +24,6 @@ footer: Open-source MIT Licensed | Copyright © 2022-present<br />Powered by sel
 
 ## 👥 交流讨论
 
-欢迎大家关注我的公众号《前端杂货铺》，获取更多前端咨询。
+欢迎大家关注我的公众号《前端杂货铺》，获取更多前端干货。
 
 <img src="https://user-images.githubusercontent.com/20135760/183246032-4b1c5fc6-a8b9-4567-bad4-cf47dceb5dd9.jpg" width="300" />
