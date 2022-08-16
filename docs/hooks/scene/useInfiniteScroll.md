@@ -1,14 +1,24 @@
 # useInfiniteScroll
 
+## 简介
+
 > useInfiniteScroll 封装了常见的无限滚动逻辑。
 
-实现原理，使用了 [useRequest](/hooks/request/use-request) hook 负责进行请求后台数据。其中 reloadAsync 对应 useRequest 的 runAsync，reload 对应 useRequest 的 run。前者返回 Promise，需要自行处理异常。后者内部已经做了异常处理。
+详细可看[官网](https://ahooks.gitee.io/zh-CN/hooks/use-infinite-scroll)
+
+注意：这里的无限滚动指的是常见的点击加载更多或者说下拉加载更加功能，而不是虚拟滚动，虚拟滚动后面会讲到。
+
+## 实现原理
+
+实现原理：使用了 [useRequest](https://ahooks.gitee.io/zh-CN/hooks/use-request/index) hook 负责进行请求后台数据。其中 reloadAsync 对应 useRequest 的 runAsync，reload 对应 useRequest 的 run。前者返回 Promise，需要自行处理异常。后者内部已经做了异常处理。
 
 另外假如传入 target 和 isNoMore 参数，通过监听 scroll 事件，判断是否滚动到指定的位置（支持设置 threshold 值-距离底部距离阈值），进行自动发起加载更多请求，从而实现滚动自动加载效果。
 
 大概说完原理，来看代码。
 
-入参以及状态定义：
+## 具体实现
+
+入参以及状态定义，可以直接看注释：
 
 ```ts
 const useInfiniteScroll = <TData extends Data>(
@@ -46,7 +56,7 @@ const useInfiniteScroll = <TData extends Data>(
 };
 ```
 
-判断是否有数据，isNoMore 的入参是当前聚合后的 data。
+判断是否有数据：isNoMore 的入参是当前聚合后的 data。
 
 ```ts
 // 判断是否还有数据
@@ -101,7 +111,7 @@ const { loading, run, runAsync, cancel } = useRequest(
 );
 ```
 
-loadMore/loadMoreAsync 和 reload/reloadAsync 分别对应调用的是 run 和 runAsync 函数。
+loadMore/loadMoreAsync 和 reload/reloadAsync 分别对应调用的是 useRequest 的 run 和 runAsync 函数。
 
 ```ts
 // 同步加载更多
@@ -168,3 +178,17 @@ useEventListener(
 ```
 
 上面提到的三个重要的值 scrollTop，scrollHeight，clientHeight 可以看 utils 中的 [rect](/hooks/utils/rect)。
+
+对应的值分别为以下结果：
+
+[scrollTop](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollTop)
+
+> Element.scrollTop 属性可以获取或设置一个元素的内容垂直滚动的像素数。一个元素的 scrollTop 值是这个元素的内容顶部（卷起来的）到它的视口可见内容（的顶部）的距离的度量。当一个元素的内容没有产生垂直方向的滚动条，那么它的 scrollTop 值为 0。
+
+[scrollHeight](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollHeight)
+
+> Element.scrollTop 属性可以获取或设置一个元素的内容垂直滚动的像素数。一个元素的 scrollTop 值是这个元素的内容顶部（卷起来的）到它的视口可见内容（的顶部）的距离的度量。当一个元素的内容没有产生垂直方向的滚动条，那么它的 scrollTop 值为 0。
+
+[clientHeight](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/clientHeight)
+
+> 这个属性是只读属性，对于没有定义 CSS 或者内联布局盒子的元素为 0，否则，它是元素内部的高度 (单位像素)，包含内边距，但不包括水平滚动条、边框和外边距。clientHeight 可以通过 CSS height + CSS padding - 水平滚动条高度 (如果存在) 来计算。
