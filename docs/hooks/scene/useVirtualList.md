@@ -4,6 +4,8 @@
 
 > 提供虚拟化列表能力的 Hook，用于解决展示海量数据渲染时首屏渲染缓慢和滚动卡顿问题。
 
+详情可见[官网](https://ahooks.gitee.io/zh-CN/hooks/use-virtual-list)，文章源代码可以点击[这里](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/useVirtualList/index.ts)
+
 ## 实现原理
 
 其实现原理监听外部容器的 scroll 事件以及其 size 发生变化的时候，触发计算逻辑算出内部容器的高度和 marginTop 值。
