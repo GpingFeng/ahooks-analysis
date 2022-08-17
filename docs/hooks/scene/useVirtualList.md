@@ -1,10 +1,16 @@
 # useVirtualList
 
+## 简介
+
 > 提供虚拟化列表能力的 Hook，用于解决展示海量数据渲染时首屏渲染缓慢和滚动卡顿问题。
+
+## 实现原理
 
 其实现原理监听外部容器的 scroll 事件以及其 size 发生变化的时候，触发计算逻辑算出内部容器的高度和 marginTop 值。
 
-其监听逻辑如下：
+## 具体实现
+
+其监听滚动逻辑如下：
 
 ```ts
 // 当外部容器的 size 发生变化的时候，触发计算逻辑
@@ -36,7 +42,7 @@ useEventListener(
 );
 ```
 
-calculateRange 非常重要，其主要做了以下的事情：
+其中 calculateRange 非常重要，它基本实现了虚拟滚动的主流程逻辑，其主要做了以下的事情：
 
 - 获取到整个内部容器的高度 totalHeight。
 - 根据外部容器的 scrollTop 算出已经“滚过”多少项，值为 offset。
@@ -44,6 +50,10 @@ calculateRange 非常重要，其主要做了以下的事情：
 - 并根据 overscan（视区上、下额外展示的 DOM 节点数量）计算出开始索引（start）和（end）。
 - 根据开始索引获取到其距离最开始的距离（offsetTop）。
 - 最后根据 offsetTop 和 totalHeight 设置内部容器的高度和 marginTop 值。
+
+变量很多，可以结合下图，会比较清晰理解：
+
+<img width="809" alt="image" src="https://user-images.githubusercontent.com/20135760/185148673-1b02da0a-c6f4-4c6d-916e-ad0839f00185.png">
 
 代码如下：
 
@@ -82,7 +92,7 @@ const calculateRange = () => {
     // margin top 为上方高度
     // @ts-ignore
     wrapper.style.marginTop = offsetTop + 'px';
-
+    // 设置最后显示的 List
     setTargetList(
       list.slice(start, end).map((ele, index) => ({
         data: ele,
@@ -93,7 +103,7 @@ const calculateRange = () => {
 };
 ```
 
-其它就是这个函数的辅助函数了，包括
+其它就是这个函数的辅助函数了，包括：
 
 - 根据外部容器以及内部每一项的高度，计算出可视区域内的数量:
 
@@ -201,3 +211,9 @@ const scrollTo = (index: number) => {
   }
 };
 ```
+
+## 思考与总结
+
+对于高度相对比较确定的情况，我们做虚拟滚动还是相对简单的，但假如高度不确定呢？
+
+或者换另外一个角度，当我们的滚动不是纵向的时候，而是横向，该如何处理呢？
