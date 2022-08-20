@@ -4,6 +4,18 @@
 
 防抖和节流在 ahooks 中底层都是使用 lodash（YYDS）去实现。
 
+## 文档以及代码
+
+文档地址：
+
+- [防抖](https://ahooks.js.org/zh-CN/hooks/use-request/debounce)
+- [节流](https://ahooks.js.org/zh-CN/hooks/use-request/throttle)
+
+详细代码：
+
+- [防抖](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/plugins/useDebouncePlugin.ts)
+- [节流](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/plugins/useThrottlePlugin.ts)
+
 ## 防抖
 
 其核心实现如下：
@@ -48,7 +60,7 @@ useEffect(() => {
 }, [debounceWait, options]);
 ```
 
-这里用到了函数劫持的小技巧。一般会分为三步：
+这里用到了函数劫持小技巧。一般会分为三步：
 
 - 保存原函数。比如这里保存原函数 fetchInstance.runAsync 为 \_originRunAsync。
 - 改写原函数。这里改写原函数 fetchInstance.runAsync，加入我们需要的防抖逻辑。

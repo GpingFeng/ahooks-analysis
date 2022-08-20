@@ -4,6 +4,12 @@
 
 > 通过设置 options.pollingInterval，进入轮询模式，useRequest 会定时触发 service 执行。
 
+## 文档以及代码
+
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-request/polling)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/plugins/usePollingPlugin.ts)
+
 ## usePollingPlugin
 
 该功能主要由 usePollingPlugin 这个插件实现。

@@ -4,6 +4,12 @@
 
 > 通过设置 options.refreshOnWindowFocus，在浏览器窗口 refocus 和 revisible 时，会重新发起请求。其中 focusTimespan 设置重新请求间隔，单位为毫秒。
 
+## 文档以及代码
+
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-request/refresh-on-window-focus)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/plugins/useRefreshOnWindowFocusPlugin.ts)
+
 ## useRefreshOnWindowFocusPlugin
 
 该功能主要是由 useRefreshOnWindowFocusPlugin 插件完成。
@@ -30,7 +36,39 @@ useEffect(() => {
 }, [refreshOnWindowFocus, focusTimespan]);
 ```
 
-其中监听逻辑，subscribeFocus 我们在[轮询](/hooks/request/use-polling-plugin)中做过解析。其主要原理是通过监 visibilitychange 实现，不再赘述。
+其中监听逻辑，subscribeFocus 其原理跟我们在[轮询](/hooks/request/use-polling-plugin) 对 subscribeReVisible.ts 文件的原理很类似。它的代码在 [subscribeFocus.ts](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/utils/subscribeFocus.ts) 文件中。其主要原理是通过 subscribe 订阅事件，并通过监 visibilitychange 和 focus 事件执行订阅器中的事件实现，可以直接看代码：
+
+```ts
+import canUseDom from '../../../utils/canUseDom';
+import isDocumentVisible from './isDocumentVisible';
+import isOnline from './isOnline';
+
+const listeners: any[] = [];
+
+function subscribe(listener: () => void) {
+  listeners.push(listener);
+  return function unsubscribe() {
+    const index = listeners.indexOf(listener);
+    listeners.splice(index, 1);
+  };
+}
+
+if (canUseDom()) {
+  const revalidate = () => {
+    // dom 不可见，或者断网的时候
+    if (!isDocumentVisible() || !isOnline()) return;
+    for (let i = 0; i < listeners.length; i++) {
+      const listener = listeners[i];
+      listener();
+    }
+  };
+  // 监听 visibilitychange 和 focus 事件
+  window.addEventListener('visibilitychange', revalidate, false);
+  window.addEventListener('focus', revalidate, false);
+}
+
+export default subscribe;
+```
 
 重点看 limit 函数。其入参为 fn 函数，timespan（时间，毫秒），主要限制在 timespan 时间内，不会再次执行 fn 函数。其实就是使用闭包的一个简易版节流函数。
 

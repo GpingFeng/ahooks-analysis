@@ -2,6 +2,12 @@
 
 阅读本章节之前，建议先阅读 useRequest 的[核心原理章节解析](/hooks/request/use-request)。
 
+## 文档以及代码
+
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-request/retry)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/plugins/useRetryPlugin.ts)
+
 ## useRetryPlugin
 
 错误重试功能主要由 useRetryPlugin 这个插件实现。

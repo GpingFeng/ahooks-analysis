@@ -2,6 +2,15 @@
 
 阅读本章节之前，建议先阅读 useRequest 的[核心原理章节解析](/hooks/request/use-request)。
 
+## 文档以及代码
+
+文档地址：
+
+- [Ready](https://ahooks.js.org/zh-CN/hooks/use-request/ready)
+- [依赖更新](https://ahooks.js.org/zh-CN/hooks/use-request/refresy-deps)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/plugins/useAutoRunPlugin.ts)
+
 ## useAutoRunPlugin
 
 Ready & 依赖更新主要由 useAutoRunPlugin 这个插件完成。
@@ -31,7 +40,7 @@ if (stopNow) {
 }
 ```
 
-这里引发了一个思考，那就是插件和 Fetch 类的隔离问题。可以看到，该插件的状态已经会影响到 Fetch 类了，在设计上我认为应该尽可能隔离，但功能上其实是有依赖的。这种暂时还没想到更优的处理方式。(或者直接在插件中修改实例上的 state？比如：`fetchInstance.state.data = cacheData.data;`)
+这里引发了一个思考，那就是插件和 Fetch 类的隔离问题。可以看到，该插件的状态其实会影响到 Fetch 类了，在设计上我认为应该尽可能隔离，但功能上其实是有依赖的。这种暂时还没想到更优的处理方式。(或者直接在插件中修改实例上的 state？比如：`fetchInstance.state.data = cacheData.data;`)
 
 然后就是 ready 发生变化的时候，进行监听处理：
 

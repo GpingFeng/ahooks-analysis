@@ -4,7 +4,13 @@
 
 > 官方文档：通过设置 options.loadingDelay ，可以延迟 loading 变成 true 的时间，有效防止闪烁。
 
-# useLoadingDelayPlugin
+## 文档以及代码
+
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-request/loading-delay)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/plugins/useLoadingDelayPlugin.ts)
+
+## useLoadingDelayPlugin
 
 这个功能主要是通过 useLoadingDelayPlugin 插件实现。其原理在 onBefore 也就是请求前阶段，通过 setTimeout 实现延迟 loading 的时间。
 

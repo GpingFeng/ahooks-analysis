@@ -4,6 +4,12 @@
 
 > useRequest 会将当前请求成功的数据缓存起来。下次组件初始化时，如果有缓存数据，我们会优先返回缓存数据，然后在背后发送新请求，也就是 SWR 的能力。
 
+## 文档以及代码
+
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-request/cache)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/plugins/useCachePlugin.ts)
+
 ## useCachePlugin
 
 缓存主要是由 useCachePlugin 这个 plugin 完成。
