@@ -10,7 +10,7 @@
 
 target 支持三种类型 React.MutableRefObject（通过 useRef 保存的 DOM）、HTMLElement、() => HTMLElement（一般运用于 SSR 场景）。
 
-第二点，DOM 类 Hooks 的 target 是支持动态变化的。如下所示：
+第二点，DOM 类 Hooks 的 target 是支持动态变化的，这就要求在 DOM 变化的时候我们内部能够感知到并做出逻辑调整。如下所示：
 
 ```js
 export default () => {
@@ -33,7 +33,9 @@ export default () => {
 
 ## getTargetElement
 
-获取到对应的 DOM 元素，这一点主要兼容以上第一点的入参规范。
+[详细源码](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/utils/domTarget.ts)
+
+该函数用来获取到对应的 DOM 元素，这一点主要兼容以上第一点的入参规范。
 
 - 假如是函数，则取执行完后的结果。
 - 假如拥有 current 属性，则取 current 属性的值，兼容 `React.MutableRefObject` 类型。
@@ -64,6 +66,12 @@ export function getTargetElement<T extends TargetType>(
 
 ## useEffectWithTarget
 
+工具函数详细代码：
+
+- [useEffectWithTarget](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/utils/useEffectWithTarget.ts)
+- [useLayoutEffectWithTarget](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/utils/useLayoutEffectWithTarget.ts)
+- [createEffectWithTarget](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/utils/createEffectWithTarget.ts)
+
 这个方法，主要是为了支持第二点，支持 target 动态变化。
 
 其中 `packages/hooks/src/utils/useEffectWithTarget.ts` 是使用 useEffect。
@@ -92,9 +100,11 @@ export default useEffectWithTarget;
 
 直接重点看这个 createEffectWithTarget 函数：
 
+其主要的实现原理就是除了模仿 useEffect/useLayoutEffect 的功能特性，判断依赖以及传入的 target 值是否发生变化，从而决定是否执行相应的逻辑。
+
 - createEffectWithTarget 返回的函数 **useEffectWithTarget** 接受三个参数，前两个跟 useEffect 一样，第三个就是 target。
-- useEffectType 就是 useEffect 或者 useLayoutEffect。注意这里调用的时候，**没传第二个参数，也就是每次都会执行**。
-- hasInitRef 判断是否已经初始化。lastElementRef 记录的是最后一次 target 元素的列表。lastDepsRef 记录的是最后一次的依赖。unLoadRef 是执行完 effect 函数（对应的就是 useEffect 中的 effect 函数）的返回值，在组件卸载的时候执行。
+- useEffectType 就是传入的 useEffect 或者 useLayoutEffect。注意这里调用的时候，**没传第二个参数，也就是每次都会执行**。
+- hasInitRef 判断是否已经初始化。lastElementRef 记录的是最后一次 target 元素的列表。lastDepsRef 记录的是最后一次的依赖。unLoadRef 是执行完 effect 函数（类似对应的就是 useEffect 中的 effect 函数）的返回值，在组件卸载的时候执行。
 - 第一次执行的时候，执行相应的逻辑，并记录下最后一次执行的相应的 target 元素以及依赖。
 - 后面每次执行的时候，都判断目标元素或者依赖是否发生变化，发生变化，则执行对应的 effect 函数。并更新最后一次执行的依赖。
 - 组件卸载的时候，执行 unLoadRef.current?.() 函数，并重置 hasInitRef 为 false。
