@@ -1,5 +1,9 @@
 # usePagination
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-pagination)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/usePagination/index.ts)
+
 > usePagination 基于 useRequest 实现，封装了常见的分页逻辑。
 
 首先通过 useRequest 处理请求，service 约定返回的数据结构为 `{ total: number, list: Item[] }`。

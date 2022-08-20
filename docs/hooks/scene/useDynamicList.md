@@ -1,5 +1,9 @@
 # useDynamicList
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-dynamic-list)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useDynamicList/index.ts)
+
 > 一个帮助你管理动态列表状态，并能生成唯一 key 的 Hook。
 
 其原理上就是对数组常见操作进行了封装。有一些比较基础，直接看代码注释即可。

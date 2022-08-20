@@ -1,5 +1,9 @@
 # useCounter
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-counter)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useCounter/index.ts)
+
 > 管理计数器的 Hook。
 
 其实现原理很简单，就是暴露相应方法对数值进行管理。

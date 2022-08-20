@@ -1,5 +1,9 @@
 # useTextSelection
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-text-selection)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useTextSelection/index.ts)
+
 > 实时获取用户当前选取的文本内容及位置。
 
 其实现原理主要是监听 mouseup 和 mousedown 事件。调用 [window.getSelection() 方法](https://developer.mozilla.org/zh-CN/docs/Web/API/Window/getSelection) 获取到 Selection 对象，并通过 [getBoundingClientRect](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/getBoundingClientRect) 方法获取到其位置信息。

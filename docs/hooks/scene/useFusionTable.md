@@ -1,5 +1,9 @@
 # useFusionTable
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-fusion-table)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useFusionTable/index.tsx)
+
 > 封装了常用的 Fusion Form 与 Fusion Table 联动逻辑。
 
 笔者没用过 Fusion。用过的同学可以 PR 补充完整。

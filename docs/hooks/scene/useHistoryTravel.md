@@ -1,5 +1,9 @@
 # useHistoryTravel
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-history-travel)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useHistoryTravel/index.ts)
+
 > 管理状态历史变化记录，方便在历史记录中前进与后退。
 
 实现原理，其在内部维护了以下的数据结构。通过队列的方式维护过去和未来的列表。

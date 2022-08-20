@@ -1,5 +1,9 @@
 # useAntdTable
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-antd-table)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useAntdTable/index.tsx)
+
 > useAntdTable 基于 useRequest 实现，封装了常用的 Ant Design Form 与 Ant Design Table 联动逻辑，并且同时支持 antd v3 和 v4。
 
 首先调用 usePagination 处理分页的逻辑。

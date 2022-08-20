@@ -1,5 +1,9 @@
 # useWebSocket
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-web-socket)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useWebSocket/index.ts)
+
 > 用于处理 WebSocket 的 Hook。
 
 主要原理是基于 WebSocket，进行一些逻辑封装，比如错误重试逻辑，组件清除后自动 disconnect 等。

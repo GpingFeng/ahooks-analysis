@@ -1,4 +1,8 @@
-# useCountdown
+# useCountDown
+
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-count-down)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useCountDown/index.ts)
 
 > 一个用于管理倒计时的 Hook。
 

@@ -1,5 +1,9 @@
 # useInfiniteScroll
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-infinite-scroll)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useInfiniteScroll/index.tsx)
+
 ## 简介
 
 > useInfiniteScroll 封装了常见的无限滚动逻辑。

@@ -1,5 +1,9 @@
 # useSelections
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-selections)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useSelections/index.ts)
+
 > 常见联动 Checkbox 逻辑封装，支持多选，单选，全选逻辑，还提供了是否选择，是否全选，是否半选的状态。
 
 实现原理，维护所有项的值 items 数组以及设置选择的元素 setSelected（Set 结构）。

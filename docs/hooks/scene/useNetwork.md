@@ -1,5 +1,9 @@
 # useNetwork
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-network)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useNetwork/index.ts)
+
 > 管理网络连接状态的 Hook。
 
 实现原理是通过监听网络 online、offline、change 事件，并通过 [navigator 的 connection](https://developer.mozilla.org/en-US/docs/Web/API/Navigator/connection) 获取到网络的情况。
