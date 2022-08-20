@@ -1,5 +1,9 @@
 # useTrackedEffect
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-tracked-effect)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useTrackedEffect/index.ts)
+
 > 追踪是哪个依赖变化触发了 useEffect 的执行。
 
 主要实现原理，通过 uesRef 记录上一次依赖的值，并在当前执行的时候，判断当前依赖值和上次依赖值之间的 diff 值。

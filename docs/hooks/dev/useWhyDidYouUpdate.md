@@ -1,5 +1,9 @@
 # useWhyDidYouUpdate
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-why-did-you-update)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useWhyDidYouUpdate/index.ts)
+
 > 帮助开发者排查是那个属性改变导致了组件的 rerender。
 
 主要实现原理是通过 useEffect 拿到上一次 props 和当前的 props 进行比较。得到值改变的 changedProps，可以直接看代码：
