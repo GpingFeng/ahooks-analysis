@@ -1,5 +1,9 @@
 # useInViewport
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-in-viewport)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useInViewport/index.ts)
+
 > 观察元素是否在可见区域，以及元素可见比例。
 
 其实现原理就是 [Intersection Observer API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API)。并使用 [intersection-observer](https://www.npmjs.com/package/intersection-observer) 这个 npm 包进行 polyfill 处理。

@@ -1,5 +1,9 @@
 # useFavicon
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-favicon)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useFavicon/index.ts)
+
 > 设置页面的 favicon。
 
 favicon 指的是页面 Tab 的这个 ICON。

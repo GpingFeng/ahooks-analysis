@@ -1,5 +1,9 @@
 # useEventListener
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-event-listener)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useEventListener/index.ts)
+
 > 优雅的使用 addEventListener。
 
 我们先来看看 addEventListener 的定义，以下来自 MDN 文档：

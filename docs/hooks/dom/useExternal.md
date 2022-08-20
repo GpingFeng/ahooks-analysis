@@ -1,5 +1,9 @@
 # useExternal
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-external)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useExternal/index.ts)
+
 > 动态注入 JS 或 CSS 资源，useExternal 可以保证资源全局唯一。
 
 其实现原理创建 link 标签加载 CSS 资源或者 script 标签加载 JS 资源。通过 document.createElement 返回 Element 对象，监听该对象获取加载状态。

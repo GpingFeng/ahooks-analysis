@@ -1,5 +1,9 @@
 # useFullscreen
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-fullscreen)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useFullscreen/index.ts)
+
 > 管理 DOM 全屏的 Hook。
 
 该 hook 主要是依赖 [screenfull](https://www.npmjs.com/package/screenfull) 这个 npm 包进行实现的。

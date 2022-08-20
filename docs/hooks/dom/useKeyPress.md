@@ -1,5 +1,9 @@
 # useKeyPress
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-key-press)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useKeyPress/index.ts)
+
 > 监听键盘按键，支持组合键，支持按键别名。
 
 其实现原理是监听 keydown 或者 keyup 事件，在回调对 keyFilter 配置进行判断，如果触发了配置的场景，则触发我们传入的 eventHandler 回调。

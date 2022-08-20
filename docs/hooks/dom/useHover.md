@@ -1,5 +1,9 @@
 # useHover
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-hover)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useHover/index.ts)
+
 > 监听 DOM 元素是否有鼠标悬停。
 
 主要实现原理是监听 `mouseenter` 触发 onEnter 事件，切换状态为 true，监听 `mouseleave` 触发 onLeave 事件，切换状态为 false。代码简单，如下：

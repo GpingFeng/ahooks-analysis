@@ -1,5 +1,9 @@
 # useDocumentVisibility
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-document-visibility)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useDocumentVisibility/index.ts)
+
 > 监听页面是否可见。
 
 这个 hook 主要使用了 Document.visibilityState 这个 API。先简单看下这个 API：

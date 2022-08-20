@@ -1,5 +1,9 @@
 # useMouse
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-mouse)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useMouse/index.ts)
+
 > 监听鼠标位置。
 
 主要实现原理是通过监听 [mousemove](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/mousemove_event) 方法，获取鼠标的位置。并通过 getBoundingClientRect 获取到 target 元素的问题，从而计算出鼠标相对于元素的位置。

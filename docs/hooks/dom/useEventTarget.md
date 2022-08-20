@@ -1,5 +1,9 @@
 # useEventTarget
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-event-target)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useEventTarget/index.ts)
+
 > 常见表单控件(通过 e.target.value 获取表单值) 的 onChange 跟 value 逻辑封装，支持自定义值转换和重置功能。
 
 直接看代码，比较简单，其实就是监听表单的 onChange 事件，拿到值后更新 value 值，更新的逻辑支持自定义。

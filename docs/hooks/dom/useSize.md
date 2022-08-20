@@ -1,5 +1,9 @@
 # useSize
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-size)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useSize/index.ts)
+
 > 监听 DOM 节点尺寸变化的 Hook。
 
 主要实现原理就是使用 ResizeObserver API 监听对应的目标的尺寸变化。

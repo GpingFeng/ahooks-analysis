@@ -1,5 +1,9 @@
 # useLongPress
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-long-press)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useLongPress/index.ts)
+
 > 监听目标元素的长按事件。
 
 其主要原理是判断当前是否支持 touch 事件，假如支持，则监听 touchstart 和 touchend 事件。假如不支持，则监听 mousedown、mouseup 和 mouseleave 事件。根据定时器设置标识，判断是否达到长按，触发回调，从而实现长按事件。

@@ -1,5 +1,9 @@
 # useTitle
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-title)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useTitle/index.ts)
+
 > 用于设置页面标题。
 
 这个页面标题指的是浏览器 Tab 中展示的。通过 document.title 设置。

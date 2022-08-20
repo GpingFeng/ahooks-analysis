@@ -1,5 +1,9 @@
 # useClickAway
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-click-away)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useClickAway/index.ts)
+
 > 监听目标元素外的点击事件。
 
 提到这个的应用场景，应该是模态框，点击外部阴影部分，自动关闭的场景。那这里它是怎么实现的呢？

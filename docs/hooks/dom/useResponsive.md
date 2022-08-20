@@ -1,5 +1,9 @@
 # useResponsive
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-responsive)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useResponsive/index.ts)
+
 > 获取响应式信息。
 
 主要实现原理是监听 resize 方法，判断与配置的每一种宽度，大于则为 true，否则为 false。
