@@ -23,12 +23,16 @@ export default defineConfig({
       path: '/hooks',
     },
     {
+      title: 'ahooks 官网',
+      path: 'https://ahooks.gitee.io/zh-CN',
+    },
+    {
       title: 'GitHub',
       path: 'https://github.com/GpingFeng/ahooks-analysis',
     },
     {
-      title: 'ahooks 官网',
-      path: 'https://ahooks.gitee.io/zh-CN',
+      title: '关于我',
+      path: 'https://github.com/GpingFeng',
     },
   ],
   locales: [['zh-CN', '中文']],
