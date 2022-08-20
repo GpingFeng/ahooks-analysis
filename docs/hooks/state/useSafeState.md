@@ -1,5 +1,9 @@
 # useSafeState
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-safe-state)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/useSafeState/index.ts)
+
 > 用法与 React.useState 完全一样，但是在组件卸载后异步回调内的 setState 不再执行，避免因组件卸载后更新状态而导致的内存泄漏。
 
 代码如下：

@@ -1,5 +1,13 @@
 # Storage
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-local-storage-state)
+
+详细代码
+
+- [createUseStorageState](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/createUseStorageState/index.ts)
+- [useLocalStorageState](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useLocalStorageState/index.ts)
+- [useSessionStorageState](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useSessionStorageState/index.ts)
+
 ahooks 封装了 useLocalStorageState 和 useSessionStorageState。将状态存储在 localStorage 和 sessionStorage 中的 Hook 。
 
 两者的使用方法是一样的，因为官方都是用的同一个方法去封装的。我们以 useLocalStorageState 为例。

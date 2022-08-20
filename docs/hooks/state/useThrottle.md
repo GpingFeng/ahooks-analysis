@@ -1,5 +1,9 @@
 # useThrottle
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-throttle)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/useThrottle/index.ts)
+
 > 用来处理节流值的 Hook。
 
 实现原理主要是调用 lodash 的 throttle 方法。

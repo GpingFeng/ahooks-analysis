@@ -1,5 +1,9 @@
 # useSet
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-set)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/useSet/index.ts)
+
 > 管理 Set 类型状态的 Hook。
 
 直接看代码。

@@ -1,5 +1,9 @@
 # useDebounce
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-debounce)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/useDebounce/index.ts)
+
 > 用来处理防抖值的 Hook。
 
 实现原理主要是调用 lodash 的 debounce 方法。

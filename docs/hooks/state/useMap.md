@@ -1,5 +1,9 @@
 # useMap
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-map)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/useMap/index.ts)
+
 > 管理 Map 类型状态的 Hook。
 
 先回顾以下 Map 的概念。Map 对象保存键值对，并且能够**记住键的原始插入顺序**。**任何值**（对象或者基本类型）都可以作为一个键或一个值。

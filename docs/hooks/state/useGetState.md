@@ -1,5 +1,9 @@
 # useGetState
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-get-state)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/useGetState/index.ts)
+
 > 给 React.useState 增加了一个 getter 方法，以获取当前最新值。
 
 其实现如下：

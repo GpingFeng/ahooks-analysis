@@ -1,5 +1,9 @@
 # useCookieState
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-cookie-state)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/useCookieState/index.ts)
+
 ahooks 封装了 useCookieState，一个可以将状态存储在 Cookie 中的 Hook 。
 
 该 hook 使用了 [js-cookie](https://www.npmjs.com/package/js-cookie 'js-cookie') 这个 npm 库。我认为选择它的理由有以下：

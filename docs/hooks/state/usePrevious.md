@@ -1,5 +1,9 @@
 # usePrevious
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-previous)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/usePrevious/index.ts)
+
 > 保存上一次状态的 Hook。
 
 其原理，是每次状态变更的时候，比较值有没有发生变化，变更状态：

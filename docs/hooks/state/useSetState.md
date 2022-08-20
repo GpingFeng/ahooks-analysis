@@ -1,8 +1,10 @@
 # useSetState
 
-## useSetState
-
 > 管理 object 类型 state 的 Hooks，用法与 class 组件的 this.setState 基本一致。
+
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-set-state)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useSetState/index.ts)
 
 先来了解一下可变数据和不可变数据的含义和区别如下：
 

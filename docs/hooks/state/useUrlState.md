@@ -1,5 +1,9 @@
 # useUrlState
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-url-state)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping/read-code/packages/hooks/src/useUrlState/index.ts)
+
 本文来讲下 ahooks 中的 useUrlState。
 
 > 通过 url query 来管理 state 的 Hook。
