@@ -1,7 +1,12 @@
 # useMount
 
 > 只在组件初始化时执行的 Hook。
-> useEffect 依赖假如为空，只会在组件初始化的时候执行。
+
+主要实现原理：useEffect 依赖假如为空，只会在组件初始化的时候执行。
+
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-mount)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useMount/index.ts)
 
 ```js
 // 省略部分代码

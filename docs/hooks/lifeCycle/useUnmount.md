@@ -4,6 +4,10 @@
 
 useEffect 可以在组件渲染后实现各种不同的副作用。有些副作用可能需要清除，所以需要返回一个函数，这个函数会在组件卸载的时候执行。
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-unmount)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useUnmount/index.ts)
+
 ```js
 const useUnmount = (fn: () => void) => {
   const fnRef = useLatest(fn);

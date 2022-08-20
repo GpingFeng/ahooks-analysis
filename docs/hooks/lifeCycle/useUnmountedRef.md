@@ -4,6 +4,10 @@
 
 通过判断有没有执行 useEffect 中的返回值判断当前组件是否已经卸载。
 
+[文档地址](https://ahooks.js.org/zh-CN/hooks/use-unmounted-ref)
+
+[详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useUnmountedRef/index.ts)
+
 ```js
 // 获取当前组件是否已经卸载的 Hook。
 const useUnmountedRef = () => {
