@@ -1,5 +1,15 @@
 # useInterval 和 useTimeout
 
+文档地址
+
+- [useInterval](https://ahooks.js.org/zh-CN/hooks/use-interval)
+- [useTimeout](https://ahooks.js.org/zh-CN/hooks/use-timeout)
+
+详细代码
+
+- [useInterval](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useInterval/index.ts)
+- [useTimeout](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useTimeout/index.ts)
+
 看名称，我们就能大概知道，它们的功能对应的是 setInterval 和 setTimeout，那对比后者有什么优势？
 
 先看 `useInterval`，代码简单，如下所示：

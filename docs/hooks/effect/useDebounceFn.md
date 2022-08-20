@@ -1,5 +1,9 @@
 # useDebounceFn
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-debounce-fn)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useDebounceFn/index.ts)
+
 > 用来处理防抖函数的 Hook。
 
 实现原理主要是调用 lodash 的 debounce 方法。

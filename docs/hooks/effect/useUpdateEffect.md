@@ -1,5 +1,13 @@
 # useUpdateEffect 和 useUpdateLayoutEffect
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-update-effect)
+
+详细代码
+
+- [useUpdateEffect](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useUpdateEffect/index.ts)
+- [useUpdateLayoutEffect](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useUpdateLayoutEffect/index.ts)
+- [createUpdateEffect](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/createUpdateEffect/index.ts)
+
 > useUpdateEffect 和 useUpdateLayoutEffect 的用法跟 useEffect 和 useLayoutEffect 一样，只是会忽略首次执行，只在依赖更新时执行。
 
 实现思路：初始化一个标识符，刚开始为 false。当首次执行完的时候，置为 true。只有标识符为 true 的时候，才执行回调函数。

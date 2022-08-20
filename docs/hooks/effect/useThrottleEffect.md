@@ -1,5 +1,9 @@
 # useThrottleEffect
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-throttle-effect)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useThrottleEffect/index.ts)
+
 > 为 useEffect 增加节流的能力。
 
 实现原理主要是调用 lodash 的 throttle 方法。

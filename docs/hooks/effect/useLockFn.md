@@ -1,5 +1,9 @@
 # useLockFn
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-lock-fn)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useLockFn/index.ts)
+
 本文来探索一下 ahooks 的 useLockFn。
 
 ## 场景

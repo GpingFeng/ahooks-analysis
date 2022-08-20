@@ -1,5 +1,9 @@
 # useAsyncEffect
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-async-effect)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useAsyncEffect/index.ts)
+
 ## 背景
 
 大家在使用 useEffect 的时候，假如回调函数中使用 async...await... 的时候，会报错如下。

@@ -1,5 +1,12 @@
 # useRafInterval 和 useRafTimeout
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/-raf-timer)
+
+详细代码
+
+- [useRafInterval](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRafInterval/index.ts)
+- [useRafInterval](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRafTimeout/index.ts)
+
 ## setTimeout 和 setInterval 的问题
 
 首先，setTimeout 和 setInterval 作为事件循环中宏任务的“两大主力”，它的执行时机不能跟我们预期一样准确的，它需要等待前面任务的执行。比如下面的 setTimeout 的第二个参数设置为 0，并不会立即执行。

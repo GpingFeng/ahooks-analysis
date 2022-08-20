@@ -1,5 +1,9 @@
 # useThrottleFn
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-throttle-fn)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useThrottleFn/index.ts)
+
 > 用来处理函数节流的 Hook。
 
 实现原理主要是调用 lodash 的 throttle 方法。
