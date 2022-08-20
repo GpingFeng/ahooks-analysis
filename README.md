@@ -8,3 +8,7 @@
 | --------------- | -------- | ---- |
 | `npm install`   | 安装依赖 | -    |
 | `npm run start` | 项目启动 | -    |
+
+## 贡献指南
+
+详细可见[贡献指南](http://localhost:8000/ahooks-analysis/guide/contribution)。
