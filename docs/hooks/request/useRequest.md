@@ -8,17 +8,22 @@
 
 useRequest **通过插件式组织代码**，核心代码极其简单，并且可以很方便的扩展出更高级的功能。目前已有能力包括：
 
-- 自动请求/手动请求
-- 轮询
-- 防抖
-- 节流
-- 屏幕聚焦重新请求
-- 错误重试
-- loading delay
-- SWR(stale-while-revalidate)
-- 缓存
+- 自动请求/手动请求。
+- 轮询。
+- 防抖。
+- 节流。
+- 屏幕聚焦重新请求。
+- 错误重试。
+- loading delay。
+- SWR(stale-while-revalidate)。
+- 缓存。
 
 这里可以看到 useRequest 的功能是非常强大的，如果让你来实现，你会如何实现？也可以从介绍中看到官方的答案——插件化机制。
+
+本文涉及到的详细代码，大家可以结合一起阅读（留意还有 utils 和 plugin 文件夹）：
+
+- [useRequest](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/useRequest.ts) 和 [useRequestImplement](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/useRequestImplement.ts)
+- [Fetch 类](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/Fetch.ts)
 
 ## 架构
 
@@ -67,7 +72,7 @@ const update = useUpdate();
 // 保证请求实例都不会发生改变
 const fetchInstance = useCreation(() => {
   // 目前只有 useAutoRunPlugin 这个 plugin 有这个方法
-  // 初始化状态，返回 { loading: xxx }，代表是否 loading
+  // 初始化状态，initState 值为 { loading: xxx }，代表是否 loading
   const initState = plugins.map((p) => p?.onInit?.(fetchOptions)).filter(Boolean);
   // 返回请求实例
   return new Fetch<TData, TParams>(
@@ -80,13 +85,13 @@ const fetchInstance = useCreation(() => {
 }, []);
 fetchInstance.options = fetchOptions;
 // run all plugins hooks
-// 执行所有的 plugin，拓展能力，每个 plugin 中都返回的方法，可以在特定时机执行
+// 执行所有的 plugin。每个 plugin 中都返回的方法，可以在特定时机执行。
 fetchInstance.pluginImpls = plugins.map((p) => p(fetchInstance, fetchOptions));
 ```
 
 实例化的时候，传参依次为请求实例，options 选项，组件的更新方法，初始状态值。
 
-这里需要非常留意的一点是最后一行，它执行了所有的 plugins 插件，传入的是 fetchInstance 实例以及 options 选项，返回的结果赋值给 fetchInstance 实例的 `pluginImpls`。
+这里需要非常留意的一点是最后一行，它执行了所有的 plugins 插件，传入的是 fetchInstance 实例以及 options 选项，返回的结果赋值给 fetchInstance 实例的 `pluginImpls` 属性。
 
 另外这个文件做的就是将结果返回给开发者了，这点不细说。
 
@@ -132,7 +137,7 @@ export default class Fetch<TData, TParams extends any[]> {
     this.subscribe();
   }
 
-  // 执行插件中的某个事件（event），rest 为参数传入
+  // 执行插件中的某个事件（event），rest 作为参数传入
   runPluginHandler(event: keyof PluginReturn<TData, TParams>, ...rest: any[]) {
     // 省略代码...
   }
@@ -170,7 +175,7 @@ export default class Fetch<TData, TParams extends any[]> {
 
 ### state 以及 setState
 
-在 constructor 中，主要是进行了数据的初始化。其中维护的数据主要包含一下几个重要的数据以及通过 setState 方法设置数据，设置完成通过 subscribe 调用通知 useRequestImplement 组件重新渲染，从而获取最新值。
+在 constructor 中，主要是进行了数据的初始化。其中维护的数据主要包含一下几个重要的数据以及通过 setState 方法设置数据，设置完成通过 subscribe 调用通知 useRequestImplement 组件重新渲染，从而获取最新值。（所以这里状态更新的时候，都会导致组件重新渲染。）
 
 ```js
 // 几个重要的返回值
@@ -222,7 +227,7 @@ export interface PluginReturn<TData, TParams extends any[]> {
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/efb903d9f0de4cc3b45fec829135fc51~tplv-k3u1fbpfcp-zoom-1.image)
 
-如果你比较仔细，你会发现**基本所有的插件功能都是在一个请求的一个或者多个阶段中实现的，也就是说我们只需要在请求的相应阶段，执行我们的插件的逻辑，就能完成我们插件的功能**。
+如果你比较仔细，你会发现**基本所有的插件功能都是在一个请求的一个或者多个阶段中实现的，也就是说我们只需要在请求的相应阶段，执行我们的插件的逻辑，就能执行和完成我们插件的功能**。
 
 执行特定阶段插件方法的函数为 runPluginHandler，其 event 入参就是上面 PluginReturn key 值。
 
@@ -238,7 +243,7 @@ runPluginHandler(event: keyof PluginReturn<TData, TParams>, ...rest: any[]) {
 通过这样的方式，Fetch 类的代码会变得非常的精简，只需要完成整体流程的功能，所有额外的功能（比如重试、轮询等等）都交给插件去实现。这么做的优点：
 
 - **符合职责单一原则**。一个 Plugin 只做一件事，相互之间不相关。整体的可维护性更高，并且拥有更好的可测试性。
-- 符合深模块的软件设计理念。其认为最好的模块提供了强大的功能，又有着简单的接口。试想每个模块由一个长方形表示，如下图，长方形的面积大小和模块实现的功能多少成比例。顶部边代表模块的接口，边的长度代表它的复杂度。**最好的模块是深的：他们有很多功能隐藏在简单的接口后。深模块是好的抽象，因为它只把自己内部的一小部分复杂度暴露给了用户。**
+- 符合深模块的软件设计理念。这个设计理念认为最好的模块既提供了强大的功能，又有着简单的接口。试想每个模块由一个长方形表示，如下图，长方形的面积大小和模块实现的功能多少成比例。顶部边代表模块的接口，边的长度代表它的复杂度。**最好的模块是深的：他们有很多功能隐藏在简单的接口后。深模块是好的抽象，因为它只把自己内部的一小部分复杂度暴露给了用户。**
 
 ![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/11aa0226420a4deabf75faed1623b2b9~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -252,7 +257,7 @@ runPluginHandler(event: keyof PluginReturn<TData, TParams>, ...rest: any[]) {
 
 #### 请求前 —— onBefore
 
-处理请求前的状态，并执行 Plugins 返回的 onBefore 方法，并根据返回值执行相应的逻辑。比如，useCachePlugin 如果还存于新鲜时间内，则不用请求，返回 returnNow，这样就会直接返回缓存的数据。
+处理请求前的状态，并执行 Plugins 返回的 onBefore 方法，并根据返回值执行相应的逻辑。比如，[useCachePlugin](./use-cache-plugin) 如果还存于新鲜时间内，则不用请求，返回 returnNow，这样就会直接返回缓存的数据。
 
 ```js
 this.count += 1;
@@ -291,7 +296,7 @@ this.options.onBefore?.(params);
 
 #### 进行请求——onRequest
 
-这个阶段只有 useCachePlugin 执行了 onRequest 方法，执行后返回 service Promise（有可能是缓存的结果），从而达到缓存 Promise 的效果。
+这个阶段只有 [useCachePlugin](./use-cache-plugin) 执行了 onRequest 方法，执行后返回 service Promise（有可能是缓存的结果），从而达到缓存 Promise 的效果。
 
 ```js
 // replace service
@@ -309,7 +314,7 @@ if (!servicePromise) {
 const res = await servicePromise;
 ```
 
-useCachePlugin 返回的 onRequest 方法：
+[useCachePlugin](./use-cache-plugin) 返回的 onRequest 方法：
 
 ```js
 // 请求阶段
@@ -369,7 +374,7 @@ if (currentCount !== this.count) {
 
 #### 最后结果处理——onSuccess/onError/onFinally
 
-这部分也就比较简单了，通过 try...catch...最后成功，就直接在 try 末尾加上 onSuccess 的逻辑，失败在 catch 末尾加上 onError 的逻辑，两者都加上 onFinally 的逻辑。
+这部分也就比较简单了，通过 try...catch...。最后成功，就直接在 try 末尾加上 onSuccess 的逻辑，失败在 catch 末尾加上 onError 的逻辑，两者都加上 onFinally 的逻辑。
 
 ```js
 try {
