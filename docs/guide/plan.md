@@ -11,13 +11,13 @@
 
 计划列表：
 
-- [ ] 首页优化
-- [ ] 指南优化
-- [ ] useRequest 优化
+- [x] 首页优化
+- [x] 指南优化
+- [x] useRequest 优化
 - Scene 优化
   - [ ] 一期
   - [ ] 二期
-- [ ] LifeCycle 优化
+- [x] LifeCycle 优化
 - [ ] State 优化
 - [ ] Effect 优化
 - DOM 优化
