@@ -1,5 +1,9 @@
 # useEventEmitter
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-event-emitter)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useEventEmitter/index.ts)
+
 > 在多个组件之间进行事件通知有时会让人非常头疼，借助 EventEmitter ，可以让这一过程变得更加简单。
 
 > 对于子组件通知父组件的情况，我们仍然推荐直接使用 props 传递一个 onEvent 函数。而对于父组件通知子组件的情况，可以使用 forwardRef 获取子组件的 ref ，再进行子组件的方法调用。 useEventEmitter 适合的是在距离较远的组件之间进行事件通知，或是在多个组件之间共享事件通知。

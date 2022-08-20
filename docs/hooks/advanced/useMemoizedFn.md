@@ -1,5 +1,9 @@
 # useMemoizedFn
 
+- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-memoized-fn)
+
+- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useMemoizedFn/index.ts)
+
 > 持久化 function 的 Hook，理论上，可以使用 useMemoizedFn 完全代替 useCallback。
 
 实现原理是通过 useRef 保持 function 引用地址不变，并且每次执行都可以拿到最新的 state 值。
