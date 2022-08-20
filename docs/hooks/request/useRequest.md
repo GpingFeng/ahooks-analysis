@@ -20,6 +20,10 @@ useRequest **通过插件式组织代码**，核心代码极其简单，并且�
 
 这里可以看到 useRequest 的功能是非常强大的，如果让你来实现，你会如何实现？也可以从介绍中看到官方的答案——插件化机制。
 
+### 文档以及代码
+
+useRequest [官方文档](https://ahooks.js.org/zh-CN/hooks/use-request/index)。
+
 本文涉及到的详细代码，大家可以结合一起阅读（留意还有 utils 和 plugin 文件夹）：
 
 - [useRequest](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/useRequest.ts) 和 [useRequestImplement](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useRequest/src/useRequestImplement.ts)
