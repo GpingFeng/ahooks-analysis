@@ -106,7 +106,7 @@ export default defineConfig({
           'hooks/effect/useThrottleEffect',
           'hooks/effect/useDeepCompareEffect',
           'hooks/effect/timer',
-          'hooks/effect/rafTimer',
+          'hooks/effect/RafTimer',
           'hooks/effect/useLockFn',
           'hooks/effect/useUpdate',
         ],
