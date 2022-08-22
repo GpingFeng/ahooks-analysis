@@ -11,4 +11,4 @@
 
 ## 贡献指南
 
-详细可见[贡献指南](http://localhost:8000/ahooks-analysis/guide/contribution)。
+详细可见[贡献指南](https://gpingfeng.github.io/ahooks-analysis/guide/contribution)。
