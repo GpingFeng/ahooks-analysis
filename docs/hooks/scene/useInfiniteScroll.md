@@ -191,7 +191,9 @@ useEventListener(
 
 [scrollHeight](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/scrollHeight)
 
-> Element.scrollTop 属性可以获取或设置一个元素的内容垂直滚动的像素数。一个元素的 scrollTop 值是这个元素的内容顶部（卷起来的）到它的视口可见内容（的顶部）的距离的度量。当一个元素的内容没有产生垂直方向的滚动条，那么它的 scrollTop 值为 0。
+> Element.scrollHeight 这个只读属性是一个元素内容高度的度量，包括由于溢出导致的视图中不可见内容。
+
+![](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight/scrollheight.png)
 
 [clientHeight](https://developer.mozilla.org/zh-CN/docs/Web/API/Element/clientHeight)
 
