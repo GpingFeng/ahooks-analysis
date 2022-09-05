@@ -6,7 +6,7 @@
 
 > 管理计数器的 Hook。
 
-其实现原理很简单，就是暴露相应方法对数值进行管理。
+其实现原理很简单，就是暴露相应方法对数值进行管理。比如增加、减少、重置等方法。
 
 初始化数据：
 
@@ -21,7 +21,7 @@ const [current, setCurrent] = useState(() => {
 });
 ```
 
-getTargetValue 获取目标数值，必须大于等于 min，小于等于 max。
+getTargetValue 获取目标数值，必须大于等于 min，小于等于 max。否则直接取 min 或者 max。
 
 ```ts
 function getTargetValue(val: number, options: Options = {}) {

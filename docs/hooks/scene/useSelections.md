@@ -6,28 +6,29 @@
 
 > 常见联动 Checkbox 逻辑封装，支持多选，单选，全选逻辑，还提供了是否选择，是否全选，是否半选的状态。
 
-实现原理，维护所有项的值 items 数组以及设置选择的元素 setSelected（Set 结构）。
+实现原理，维护所有项的值 items 数组以及设置选择的元素 setSelected（Set 数据结构）。
 
 基本都是数组和 Set 的一些基础操作。可以直接看代码：
 
-## 判断是否选中
+- 判断是否选中
 
 ```ts
 // 判断是否选中
 const isSelected = (item: T) => selectedSet.has(item);
 ```
 
-## select - 选中
+- select - 选中
 
 ```ts
 // 添加到选中的
 const select = (item: T) => {
   selectedSet.add(item);
+  // Array.from 将 Set 转换成数组
   return setSelected(Array.from(selectedSet));
 };
 ```
 
-## unSelect - 移除
+- unSelect - 移除
 
 ```ts
 // 从选中列表中山茶油
@@ -37,7 +38,7 @@ const unSelect = (item: T) => {
 };
 ```
 
-## toggle - 切换选中态
+- toggle - 切换选中态
 
 ```ts
 // 切换选中态
@@ -50,7 +51,7 @@ const toggle = (item: T) => {
 };
 ```
 
-## selectAll - 选中所有
+- selectAll - 选中所有
 
 ```ts
 // 选中所有
@@ -62,7 +63,7 @@ const selectAll = () => {
 };
 ```
 
-## unSelectAll - 去除所有选中
+- unSelectAll - 去除所有选中
 
 ```ts
 const unSelectAll = () => {
@@ -73,7 +74,7 @@ const unSelectAll = () => {
 };
 ```
 
-## noneSelected - 判断是否一个都没有选中
+- noneSelected - 判断是否一个都没有选中
 
 ```ts
 // 判断是否一个都没有选中
@@ -83,7 +84,7 @@ const noneSelected = useMemo(() => items.every(o => !selectedSet.has(o)), [
 ]);
 ```
 
-## allSelected - 是否所有的都选中
+- allSelected - 是否所有的都选中
 
 ```ts
 // 是否所有的都选中
@@ -93,7 +94,7 @@ const allSelected = useMemo(
 );
 ```
 
-## partiallySelected - 是否部分选中
+- partiallySelected - 是否部分选中
 
 ```ts
 // 是否部分选中
@@ -103,7 +104,7 @@ const partiallySelected = useMemo(() => !noneSelected && !allSelected, [
 ]);
 ```
 
-## toggleAll - 反转所有
+- toggleAll - 反转所有
 
 ```ts
 // 反转所有

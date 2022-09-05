@@ -17,7 +17,7 @@ interface IData<T> {
 }
 ```
 
-## reset - 重置
+- reset - 重置
 
 直接将 present 值设置为初始值或者入参中的第一个值。并重置 future 和 past。
 
@@ -36,7 +36,7 @@ const reset = (...params: any[]) => {
 };
 ```
 
-## setValue - 设置 value
+- setValue - 设置 value
 
 其对应的方法是 updateValue。直接看代码：
 
@@ -53,7 +53,7 @@ const updateValue = (val: T) => {
 };
 ```
 
-## \_forward & \_backward - 前进和后退
+- \_forward & \_backward - 前进和后退
 
 不管前进还是后退，都是调用 `split` 函数。不同的是前进则第二个参数传递的是 feature，后退则第二个参数传递的是 past。
 
@@ -93,7 +93,8 @@ const _backward = (step: number = -1) => {
 split 函数主要的作用将传入 targetArr，根据 step，分成当前状态、之前、未来的状态。
 
 比如前进，出参为 2 和 [1,2,3,4]，得到的结果是 `{ _current: 2, _before: [1], _after: [3,4] }`。
-比如前进，出参为 -1，[1,2,3,4]，得到的结果是 `{ _current: 4, _before: [1, 2, 3], _after: [] }`。
+
+比如后退，出参为 -1，[1,2,3,4]，得到的结果是 `{ _current: 4, _before: [1, 2, 3], _after: [] }`。
 
 ```ts
 // 获取 current 值的下标
@@ -126,7 +127,7 @@ const split = <T>(step: number, targetArr: T[]) => {
 };
 ```
 
-## go - 跳到具体某一步
+- go - 跳到具体某一步
 
 最终调用 \_forward 和 \_backward
 

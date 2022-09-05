@@ -15,7 +15,7 @@
 const [timeLeft, setTimeLeft] = useState(() => calcLeft(targetDate));
 ```
 
-其中 calcLeft 是计算目标时间和当前时间之间还有多少毫秒：
+其中 calcLeft 方法是计算目标时间和当前时间之间还有多少毫秒，入参是目标时间：
 
 ```ts
 // 计算目标时间和当前时间之间还有多少毫秒
@@ -37,6 +37,7 @@ const calcLeft = (t?: TDate) => {
 通过定时器进行倒计时：
 
 ```ts
+// 保证取到最新的值
 const onEndRef = useLatest(onEnd);
 
 useEffect(() => {
@@ -67,8 +68,22 @@ useEffect(() => {
 最后针对返回的结果进行格式化：
 
 ```ts
+// 格式化后的倒计时
+const parseMs = (milliseconds: number): FormattedRes => {
+  return {
+    days: Math.floor(milliseconds / 86400000),
+    hours: Math.floor(milliseconds / 3600000) % 24,
+    minutes: Math.floor(milliseconds / 60000) % 60,
+    seconds: Math.floor(milliseconds / 1000) % 60,
+    milliseconds: Math.floor(milliseconds) % 1000,
+  };
+};
+
 // 对结果进行 format
 const formattedRes = useMemo(() => {
   return parseMs(timeLeft);
 }, [timeLeft]);
+
+// 将结果返回给开发者
+return [timeLeft, formattedRes] as const;
 ```

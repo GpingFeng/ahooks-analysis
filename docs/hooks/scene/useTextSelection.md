@@ -21,19 +21,24 @@ selection 是一个 Selection 对象。 如果想要将 selection 转换为字�
 ```ts
 useEffectWithTarget(
   () => {
+    // 获取到目标元素
     const el = getTargetElement(target, document);
     if (!el) {
       return;
     }
 
+    // 鼠标松开时候触发回调
     const mouseupHandler = () => {
       let selObj: Selection | null = null;
       let text = '';
       let rect = initRect;
       if (!window.getSelection) return;
+      // 返回一个 Selection 对象，表示用户选择的文本范围或光标的当前位置。
       selObj = window.getSelection();
+      // 通过 toString 方法转换成字符串
       text = selObj ? selObj.toString() : '';
       if (text) {
+        // 获取到该对象为止
         rect = getRectFromSelection(selObj);
         setState({ ...state, text, ...rect });
       }
@@ -50,7 +55,7 @@ useEffectWithTarget(
       const selObj = window.getSelection();
       if (!selObj) return;
       // https://developer.mozilla.org/zh-CN/docs/Web/API/Selection/removeAllRanges
-      // Selection.removeAllRanges() 方法会从当前 selection 对象中移除所有的 range 对象，取消所有的选择只 留下anchorNode 和focusNode属性并将其设置为 null。
+      // Selection.removeAllRanges() 方法会从当前 selection 对象中移除所有的 range 对象，取消所有的选择只留下 anchorNode 和focusNode 属性并将其设置为 null。
       selObj.removeAllRanges();
     };
 

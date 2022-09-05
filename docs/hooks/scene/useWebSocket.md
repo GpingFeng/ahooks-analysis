@@ -15,7 +15,7 @@
 - 2 (WebSocket.CLOSING)。连接正在关闭。
 - 3 (WebSocket.CLOSED)。连接已关闭或者没有链接成功。
 
-另外可以看到 typescript 内部有对 WebSocket 回调事件（WebSocketEventMap）以及其实例（WebSocket）的申明。
+另外可以看到 typescript 内部有对 WebSocket 回调事件（WebSocketEventMap）以及其实例（WebSocket）的定义。
 
 ```ts
 export enum ReadyState {
@@ -41,11 +41,13 @@ export interface Options {
 }
 
 export interface Result {
+  // 事件
   latestMessage?: WebSocketEventMap['message'];
   sendMessage?: WebSocket['send'];
   disconnect?: () => void;
   connect?: () => void;
   readyState: ReadyState;
+  // 实例
   webSocketIns?: WebSocket;
 }
 ```
@@ -102,7 +104,7 @@ export default function useWebSocket(
 }
 ```
 
-再来看 webSocket 的连接，其中会对相关的回调事件进行处理：
+再来看 webSocket 的连接，其中会对相关的回调事件进行处理，比如错误、成功回调。
 
 ```ts
 // 创建链接
@@ -165,7 +167,7 @@ const connectWs = () => {
 };
 ```
 
-上面当 WebSocket 错误的时候，onerror 回调中，我们会调用 reconnect 进行重试。我们来看下 reconnect 函数：
+上面当 WebSocket 错误的时候，也就是 onerror 回调中，我们会调用 reconnect 进行重试。重试支持重试次数的定义，我们来看下 reconnect 函数：
 
 ```ts
 // 重试。重新连接
@@ -189,7 +191,7 @@ const reconnect = () => {
 };
 ```
 
-封装暴露常见操作：发送信息，断开，连接等方法：
+封装暴露常见操作，比如发送信息，断开，连接等方法：
 
 ```ts
 // 发送消息函数
@@ -218,7 +220,7 @@ const disconnect = () => {
 };
 ```
 
-socketUrl 更新的时候，manual 为 false，则自动连接：
+socketUrl 更新的时候，manual （手动连接）为 false，则自动连接：
 
 ```ts
 useEffect(() => {

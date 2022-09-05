@@ -8,7 +8,7 @@
 
 其原理上就是对数组常见操作进行了封装。有一些比较基础，直接看代码注释即可。
 
-## 生成唯一的 key
+- 生成唯一的 key
 
 通过 useRef 返回同一个 ref 对象，每次设置的时候都自增 1，从而保证生成唯一的 key。keyList 中某个 item 的索引跟其对应源数据 item 索引保持一致。
 
@@ -26,7 +26,7 @@ const setKey = useCallback((index: number) => {
 }, []);
 ```
 
-## 初始数据的处理
+- 初始数据的处理
 
 通过 useState 设置初始化数据。
 
@@ -40,7 +40,7 @@ const [list, setList] = useState(() => {
 });
 ```
 
-## resetList - 重设 list
+- resetList - 重设 list
 
 ```ts
 // 重置 list，重新设置 list 的值
@@ -57,7 +57,7 @@ const resetList = useCallback((newList: T[]) => {
 }, []);
 ```
 
-## insert - 在指定位置插入元素
+- insert - 在指定位置插入元素
 
 通过 splice 方法进行处理。
 
@@ -73,14 +73,14 @@ const insert = useCallback((index: number, item: T) => {
 }, []);
 ```
 
-## getKey - 获取 key 值
+- getKey - 获取 key 值
 
 ```ts
 // 获取某个元素的 key 值
 const getKey = useCallback((index: number) => keyList.current[index], []);
 ```
 
-## getIndex - 获取某个值下标
+- getIndex - 获取某个值下标
 
 ```ts
 // 获取某个值的下标
@@ -90,7 +90,7 @@ const getIndex = useCallback(
 );
 ```
 
-## merge - 合并列表
+- merge - 合并列表
 
 ```ts
 // 将两个列表合并
@@ -109,7 +109,7 @@ const merge = useCallback((index: number, items: T[]) => {
 }, []);
 ```
 
-## replace - 替换某个元素
+- replace - 替换某个元素
 
 ```ts
 // 替换
@@ -122,7 +122,7 @@ const replace = useCallback((index: number, item: T) => {
 }, []);
 ```
 
-## remove - 移除某项
+- remove - 移除某项
 
 这里除了移除数组中的某项，还需要移除 keyList 中的值，只是这里还做了错误捕获，这个没想到会是什么场景。
 
@@ -144,7 +144,7 @@ const remove = useCallback((index: number) => {
 }, []);
 ```
 
-## move - 移动元素
+- move - 移动元素
 
 ```ts
 // 移动元素
@@ -177,7 +177,7 @@ const move = useCallback((oldIndex: number, newIndex: number) => {
 }, []);
 ```
 
-## push - 在列表末尾添加元素
+- push - 在列表末尾添加元素
 
 ```ts
 // 在列表末尾添加元素
@@ -189,7 +189,7 @@ const push = useCallback((item: T) => {
 }, []);
 ```
 
-## pop - 移除末尾项
+- pop - 移除末尾项
 
 ```ts
 // 移除末尾项
@@ -205,7 +205,7 @@ const pop = useCallback(() => {
 }, []);
 ```
 
-## unshift - 在起始位置添加元素
+- unshift - 在起始位置添加元素
 
 ```ts
 // 在列表起始位置添加元素
@@ -217,7 +217,7 @@ const unshift = useCallback((item: T) => {
 }, []);
 ```
 
-## shift - 移除起始位置元素
+- shift - 移除起始位置元素
 
 ```ts
 const shift = useCallback(() => {
@@ -231,7 +231,7 @@ const shift = useCallback(() => {
 }, []);
 ```
 
-## sortList - 校准排序
+- sortList - 校准排序
 
 为什么要校对？
 

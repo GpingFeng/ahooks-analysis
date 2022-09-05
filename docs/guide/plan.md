@@ -15,8 +15,8 @@
 - [x] 指南优化
 - [x] useRequest 优化
 - Scene 优化
-  - [ ] 一期
-  - [ ] 二期
+  - [x] 一期
+  - [x] 二期
 - [x] LifeCycle 优化
 - [ ] State 优化
 - [ ] Effect 优化
