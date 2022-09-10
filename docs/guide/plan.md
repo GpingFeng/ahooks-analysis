@@ -14,18 +14,7 @@
 - [x] 首页优化
 - [x] 指南优化
 - [x] useRequest 优化
-- Scene 优化
-  - [x] 一期
-  - [x] 二期
-- [x] LifeCycle 优化
-- [ ] State 优化
-- [ ] Effect 优化
-- DOM 优化
-  - [ ] 一期
-  - [ ] 二期
-- [ ] Advanced 优化
-- [ ] Dev 优化
-- [ ] Utils 优化
+- [x] 各个 hook 优化
 
 ## 一期计划列表
 
