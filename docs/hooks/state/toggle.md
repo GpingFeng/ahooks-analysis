@@ -18,7 +18,7 @@
 
 > useToggle，用于在两个状态值间切换的 Hook。
 
-实际上，useBoolean 又是 useToggle 的一个特殊使用场景。
+实际上，useBoolean 只是 useToggle 的一个特殊使用场景。
 
 先看 useToggle。
 

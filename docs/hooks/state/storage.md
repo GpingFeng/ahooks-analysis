@@ -29,7 +29,7 @@ export default useLocalStorageState;
 
 - 先是调用传入的参数。假如报错会及时 catch。这是因为：
   - 这里返回的 storage 可以看到其实可能是 undefined 的，后面都会有 catch 的处理。
-  - 另外，从这个 [issue](https://github.com/alibaba/hooks/issues/800 'issue') 中可以看到 cookie 被 disabled 的时候，也是访问不了 localStorage 的。[stackoverflow](https://stackoverflow.com/questions/26550770/can-session-storage-local-storage-be-disabled-and-cookies-enabled 'stackoverflow') 也有这个讨论。（奇怪的知识又增加了）
+  - 另外，从这个 [issue](https://github.com/alibaba/hooks/issues/800 'issue') 中可以看到 cookie 被 disabled 的时候，也是访问不了 localStorage 的。[stackoverflow](https://stackoverflow.com/questions/26550770/can-session-storage-local-storage-be-disabled-and-cookies-enabled 'stackoverflow') 也有这个讨论。（奇怪的知识又增加了）。
 
 ```js
 export function createUseStorageState(getStorage: () => Storage | undefined) {
