@@ -31,7 +31,7 @@ const select = (item: T) => {
 - unSelect - 移除
 
 ```ts
-// 从选中列表中山茶油
+// 从选中列表中删除
 const unSelect = (item: T) => {
   selectedSet.delete(item);
   return setSelected(Array.from(selectedSet));
