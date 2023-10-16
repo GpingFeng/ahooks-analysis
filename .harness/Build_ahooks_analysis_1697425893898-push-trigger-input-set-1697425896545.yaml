@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_ahooks_analysis_1697425893898-push-trigger-input-set
+  identifier: Build_ahooks_analysis_1697425893898pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_ahooks_analysis_1697425893898
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
