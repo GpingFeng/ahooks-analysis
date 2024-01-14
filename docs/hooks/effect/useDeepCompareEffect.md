@@ -25,7 +25,7 @@ const useDeepCompareEffect = (effect: EffectCallback, deps: DependencyList) => {
   const signalRef = useRef<number>(0);
 
   // 判断最新的依赖和旧的区别
-  // 如果相等，则变更 signalRef.current，从而触发 useEffect 中的回调
+  // 如果不相等，则变更 signalRef.current，从而触发 useEffect 中的回调
   if (!depsEqual(deps, ref.current)) {
     ref.current = deps;
     signalRef.current += 1;
