@@ -2,7 +2,7 @@
 
 - [文档地址](https://ahooks.js.org/zh-CN/hooks/use-controllable-value)
 
-- [详细代码](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useControllableValue/index.ts)
+- [详细代码看这里](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useControllableValue/index.ts)
 
 > 在某些组件开发时，我们需要组件的状态既可以自己管理，也可以被外部控制，useControllableValue 就是帮你管理这种状态的 Hook。
 
