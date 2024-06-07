@@ -25,4 +25,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 token
-        publish_dir: ./  # 设置为你的构建输出目录
+        publish_dir: ./docs-dist  # 设置为你的构建输出目录
