@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main  # 设置为你的主分支名称
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:

@@ -3,7 +3,7 @@ title: ahooks analysis - ahooks 源码分析
 order: 10
 hero:
   title: ahooks analysis
-  desc: 📖 全网最全 ahooks 源码分析，帮助你更深入 React Hooks
+  desc: 📖 全网最全 ahooks 源码分析，帮助你更加深入 React Hooks
   actions:
     - text: 指南
       link: /guide
