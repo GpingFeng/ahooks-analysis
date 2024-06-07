@@ -1,6 +1,6 @@
 # useControllableValue
 
-- [文档地址](https://ahooks.js.org/zh-CN/hooks/use-controllable-value)
+- [文档地址看这里](https://ahooks.js.org/zh-CN/hooks/use-controllable-value)
 
 - [详细代码看这里](https://github.com/GpingFeng/hooks/blob/guangping%2Fread-code/packages/hooks/src/useControllableValue/index.ts)
 
