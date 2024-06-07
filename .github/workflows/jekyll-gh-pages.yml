@@ -1,28 +1,31 @@
-name: Build and Deploy
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
-      - main  # 当 push 到 main 分支时触发
+      - main  # 设置为你的主分支名称
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v2  # 检出代码
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '16'  # 设置 Node.js 的版本
+      - name: Set up Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
 
-    - name: Install Dependencies
-      run: npm install  # 安装依赖
+      - name: Install dependencies
+        run: npm install
 
-    - name: Build Docs
-      run: npm run docs:build  # 构建文档
+      - name: Build project
+        run: npm run docs:build
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}  # 使用 GitHub 提供的 token
-        publish_dir: ./docs-dist  # 设置为你的构建输出目录
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs-dist
