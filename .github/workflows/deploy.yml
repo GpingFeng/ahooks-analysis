@@ -10,10 +10,12 @@ on:
 
 jobs:
   build:
+    runs-on: ubuntu-latest
+
     permissions:
       actions: write
-      contents: read
-    runs-on: ubuntu-latest
+      contents: write
+      pull-requests: write  # 读取和写入拉取请求的权限
 
     steps:
       - name: Checkout repository
