@@ -55,7 +55,7 @@ const updateValue = (val: T) => {
 
 - \_forward & \_backward - 前进和后退
 
-不管前进还是后退，都是调用 `split` 函数。不同的是前进则第二个参数传递的是 feature，后退则第二个参数传递的是 past。
+不管前进还是后退，都是调用 `split` 函数。不同的是前进则第二个参数传递的是 future，后退则第二个参数传递的是 past。
 
 ```ts
 // 前进，默认前进一步
