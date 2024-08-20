@@ -12,10 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    permissions:
-      actions: write
-      contents: write
-      pull-requests: write  # 读取和写入拉取请求的权限
+    permissions: write-all
 
     steps:
       - name: Checkout repository
